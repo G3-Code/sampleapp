@@ -5,13 +5,23 @@ import "../styles/App.css";
 import { Route } from "react-router-dom";
 import WeatherForecast from "./WeatherForecast";
 
-export const LOGGING = false;
-
+/**
+ * App handles the over all app's routing and loading info on the start
+ */
 class App extends React.Component {
+  /**
+   * Loads the forecast and distinct city information.
+   * By default the city is "Chennai"
+   */
   async componentDidMount() {
     await this.props.getForecast(this.props.city);
     await this.props.getCities();
   }
+
+  /**
+   * Select handler. When uses chooses a city from the dropdown it retrieves the
+   * latest forecast for that city.
+   */
   handleSelect = city => {
     this.setState({
       ...this.state,
@@ -19,13 +29,22 @@ class App extends React.Component {
     });
     this.props.getForecast(city);
   };
+
+  /**
+   * App's render function.
+   *
+   * Displays app title and holds the default routing info for viewing forecast
+   */
   render() {
     return (
       <div className="App">
         <div className="container">
+          {/* HEADER INFO */}
           <nav>
             <h1>Weather App</h1>
           </nav>
+
+          {/* FORECAST SECTION */}
           <section className="weather-section">
             <Route
               exact
@@ -45,6 +64,12 @@ class App extends React.Component {
   }
 }
 
+/**
+ * This function maps the state values to be used as props in render function.
+ * This function is provided by redux.
+ *
+ * @param {Object} state
+ */
 const mapStateToProps = state => {
   return {
     ...state,
