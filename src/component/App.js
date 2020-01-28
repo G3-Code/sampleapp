@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import "../styles/App.css";
 import { Route } from "react-router-dom";
 import WeatherForecast from "./WeatherForecast";
+import Header from "./Header";
 
 /**
  * App handles the over all app's routing and loading info on the start
@@ -40,9 +41,7 @@ class App extends React.Component {
       <div className="App">
         <div className="container">
           {/* HEADER INFO */}
-          <nav>
-            <h1>Weather App</h1>
-          </nav>
+          <Header name="Gayathri's " />
 
           {/* FORECAST SECTION */}
           <section className="weather-section">

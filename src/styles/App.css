@@ -33,7 +33,9 @@ nav {
   align-items: center;
   margin-bottom: 3vh;
 }
-
+.logo-header {
+  margin-right: 20px;
+}
 .weather-section {
   display: flex;
   flex-direction: column;
