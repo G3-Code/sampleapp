@@ -1,5 +1,4 @@
 import React from "react";
-import "../App.css";
 
 export default function Weather(props) {
   let { id, day, message, high, low } = props.forecast;

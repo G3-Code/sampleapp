@@ -1,7 +1,7 @@
 import React from "react";
 import { getForecast, getCities } from "../actions";
 import { connect } from "react-redux";
-import "../App.css";
+import "../styles/App.css";
 import { Route } from "react-router-dom";
 import WeatherForecast from "./WeatherForecast";
 

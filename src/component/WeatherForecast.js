@@ -1,6 +1,5 @@
 import React from "react";
 import Weather from "./Weather";
-import "../App.css";
 import CityHeader from "./CityHeader";
 import CurrentWeather from "./CurrentWeather";
 
