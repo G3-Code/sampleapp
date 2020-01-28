@@ -1,38 +1,127 @@
+/* Border box declaration 
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after
+   */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, Geneva, sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: content;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+nav {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3vh;
 }
 
-.App-link {
-  color: #61dafb;
+.weather-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.weather-forecast {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(247, 244, 244);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.city-header {
+  height: 40px;
+  border-bottom: 1px solid rgb(247, 244, 244);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.city-latest-forecast {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.forecasts {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  align-items: center;
+}
+
+.forecast-card {
+  width: 100px;
+  height: 40vh;
+  background-color: rgb(247, 244, 244);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5px;
+}
+
+.img-weather {
+  width: 50px;
+  height: auto;
+}
+
+.img-weather-title {
+  width: 150px;
+  height: auto;
+}
+
+.current-temp {
+  font-size: 5rem;
+}
+
+/* mobile screen Sizes */
+@media only screen and (max-width: 550px) {
+  .forecasts {
+    flex-direction: column;
+    width: 325px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .forecast-card {
+    width: 100%;
+    height: 15vh;
+    flex-direction: row;
+  }
+
+  .weather-forecast {
+    width: 100%;
+  }
+
+  .img-weather-title {
+    width: 100px;
+    height: auto;
+  }
+
+  .current-temp {
+    font-size: 4rem;
   }
 }
