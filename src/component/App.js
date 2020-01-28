@@ -5,6 +5,8 @@ import "../App.css";
 import { Route } from "react-router-dom";
 import WeatherForecast from "./WeatherForecast";
 
+export const LOGGING = false;
+
 class App extends React.Component {
   async componentDidMount() {
     await this.props.getForecast(this.props.city);
@@ -53,4 +55,5 @@ const mapStateToProps = state => {
     cities: state.cities
   };
 };
+
 export default connect(mapStateToProps, { getForecast, getCities })(App);

@@ -13,7 +13,6 @@ export const getForecast = city => {
       const data = await axios
         .get(`${APIURL}forecast/${city}`)
         .then(res => res.data);
-      console.log("====>>========" + data.currentForecast.message);
       dispatch({
         type: "GET_FORECAST_SUCCESS",
         payload: data
