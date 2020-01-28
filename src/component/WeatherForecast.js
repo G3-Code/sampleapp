@@ -8,6 +8,10 @@ class WeatherForecast extends React.Component {
     super(props);
   }
   render() {
+    let imgMessage = "Sunny";
+    if (this.props.forecastInfo.currentForecast.message) {
+      imgMessage = this.props.forecastInfo.currentForecast.message;
+    }
     return (
       <div className="weather-forecast">
         <div className="city-header">
@@ -26,7 +30,11 @@ class WeatherForecast extends React.Component {
           </select>
         </div>
         <div className="city-latest-forecast">
-          <img src={Sunny} alt="Sunny Day" className="img-weather-title" />
+          <img
+            src={require("../assets/" + imgMessage + ".png")}
+            alt="Sunny Day"
+            className="img-weather-title"
+          />
           <div className="current-temp">
             {this.props.forecastInfo.currentForecast.high}&deg;
           </div>
