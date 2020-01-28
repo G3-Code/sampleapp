@@ -17,7 +17,7 @@ class WeatherForecast extends React.Component {
 
         <CurrentWeather currentForecast={currentForecast} />
         <div className="forecasts">
-          {this.props.forecastInfo.forecasts.map((forecast, index) => (
+          {forecasts.map((forecast, index) => (
             <Weather key={index} forecast={forecast} />
           ))}
         </div>
