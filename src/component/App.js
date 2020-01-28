@@ -21,11 +21,13 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="container">
-          <nav>This is navigation pane</nav>
+          <nav>
+            <h1>Weather App</h1>
+          </nav>
           <section className="weather-section">
             <Route
               exact
-              path="/weather"
+              path="/"
               render={props => (
                 <WeatherForecast
                   {...props}
