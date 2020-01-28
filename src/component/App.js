@@ -2,7 +2,7 @@ import React from "react";
 import { getForecast, getCities } from "../actions";
 import { connect } from "react-redux";
 import "../App.css";
-import { Route, NavLink } from "react-router-dom";
+import { Route } from "react-router-dom";
 import WeatherForecast from "./WeatherForecast";
 
 class App extends React.Component {

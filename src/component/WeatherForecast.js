@@ -1,45 +1,21 @@
 import React from "react";
 import Weather from "./Weather";
 import "../App.css";
-import Sunny from "../assets/partlysunny.png";
+import CityHeader from "./CityHeader";
+import CurrentWeather from "./CurrentWeather";
 
 class WeatherForecast extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
-    let imgMessage = "Sunny";
-    if (this.props.forecastInfo.currentForecast.message) {
-      imgMessage = this.props.forecastInfo.currentForecast.message;
-    }
+    let { city, cities, currentForecast, forecasts } = this.props.forecastInfo;
     return (
       <div className="weather-forecast">
-        <div className="city-header">
-          <p>{this.props.forecastInfo.city}</p>
-          <select
-            ref="citySelector"
-            onChange={() =>
-              this.props.handleSelect(this.refs.citySelector.value)
-            }
-          >
-            {this.props.forecastInfo.cities.map((city, index) => (
-              <option key={index} value={city}>
-                {city}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="city-latest-forecast">
-          <img
-            src={require("../assets/" + imgMessage + ".png")}
-            alt="Sunny Day"
-            className="img-weather-title"
-          />
-          <div className="current-temp">
-            {this.props.forecastInfo.currentForecast.high}&deg;
-          </div>
-          <h4> {this.props.forecastInfo.currentForecast.message}</h4>
-        </div>
+        <CityHeader
+          city={city}
+          cities={cities}
+          handleSelect={this.props.handleSelect}
+        />
+
+        <CurrentWeather currentForecast={currentForecast} />
         <div className="forecasts">
           {this.props.forecastInfo.forecasts.map((forecast, index) => (
             <Weather key={index} forecast={forecast} />
