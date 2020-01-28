@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 /**
  * The header information in the forecast containing the city name and dropdown with cities.
@@ -34,3 +35,8 @@ export default class CityHeader extends React.Component {
     );
   }
 }
+
+CityHeader.propTypes = {
+  city: PropTypes.string,
+  cities: PropTypes.arrayOf(PropTypes.string)
+};
