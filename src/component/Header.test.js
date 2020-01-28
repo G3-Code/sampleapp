@@ -11,10 +11,7 @@ const setUpTest = (props = {}) => {
 describe("TS1: Testing the header component", () => {
   let component;
   beforeEach(() => {
-    const props = {
-      name: "John"
-    };
-    component = setUpTest(props);
+    component = setUpTest();
   });
   it("TC1: Should render without errors", () => {
     const wrapper = findByTestAttr(component, ".img-weather");
