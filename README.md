@@ -12,7 +12,7 @@ Develope a mini weather app that will consume data from backend and display it o
 
 ## Front-End
 
-[FE: Click here to see the hosteted application](https://loving-mccarthy-24e034.netlify.com/)
+[FE: Click here to see the hosted application](https://loving-mccarthy-24e034.netlify.com/)
 
 ## Back-End
 
