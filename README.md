@@ -27,7 +27,7 @@ Develope a mini weather app that will consume data from backend and display it o
 - Redux
 - Middlewares (Logger, Thunk)
 - Axios (Access BE API)
-- HTML5/CSS3
+- HTML5/CSS3 (Responsive)
 - Netlify (Hosting)
 - Jest/Enzyme
 - Moxios (test axios call in action creator)
