@@ -1,68 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Take home assignment: Cognizant (01/27/2019)
 
-## Available Scripts
+### Requirements
 
-In the project directory, you can run:
+Develope a mini weather app that will consume data from backend and display it on the browser based on a city searched. The tech stack to be used is react, redux, thunk for Front End. The tech stack to be used for Back End is nodejs/Express. The data can be served static from any datta structure. Here is a sample image of how the front end should look like:
 
-### `yarn start`
+![image info](./AssignmentPic.jpeg)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Solution
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Hosting
 
-### `yarn test`
+## Front-End
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[FE: Click here to see the hosteted application](https://loving-mccarthy-24e034.netlify.com/)
 
-### `yarn build`
+## Back-End
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[BE: Route to get all the forecast for a particular place](http://weather-app-be.herokuapp.com/forecast/Chennai)
+[BE: Route to get all the distinct cities available](http://weather-app-be.herokuapp.com/cities)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Tech-Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Front-End
 
-### `yarn eject`
+- React
+- Redux
+- Middlewares (Logger, Thunk)
+- Axios (Access BE API)
+- HTML5/CSS3
+- Netlify (Hosting)
+- Jest/Enzyme
+- Moxios (test axios call in action creator)
+- PropTypes (test prop types)
+- check-prop-types (test prop types)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Back-End
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- NodeJS
+- Express
+- Cors
+- Jest/Supertest
